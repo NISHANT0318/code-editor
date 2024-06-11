@@ -1,12 +1,25 @@
 import { useState } from 'react'
 import './App.css'
+import Editor from './components/Editor'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-      <h1>Hello World</h1>
+      <div className='pane top-pane'>
+        <Editor/>
+        <Editor/>
+        <Editor/>
+      </div>
+      <div className='pane'>
+        <iframe 
+         title='output'
+         sandbox='allow-script'
+         width="100%"
+         height="100%"
+         frameborder="0"></iframe>
+      </div>
     </>
   )
 }
